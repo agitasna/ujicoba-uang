@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root{
+
+    --primary:#6D4C41;
+    --secondary:#8D6E63;
+    --accent:#A1887F;
+
+    --background:#F7F5F2;
+    --card:#FFFFFF;
+
+    --text:#333333;
+    --text-light:#757575;
+
+    --border:#E8E2DC;
+
+}
+
+html,
+body,
+[class*="css"]{
+    font-family:'Poppins',sans-serif;
+}
+
+.stApp{
+    background:var(--background);
+}
+
+.block-container{
+    max-width:1450px;
+    padding-top:1.5rem;
+    padding-bottom:2rem;
+}
+
+section[data-testid="stSidebar"]{
+
+    background:linear-gradient(
+        180deg,
+        #6D4C41,
+        #4E342E
+    );
+
+}
+
+section[data-testid="stSidebar"] *{
+    color:white !important;
+}
+
+section[data-testid="stSidebar"] .stRadio{
+    background:rgba(255,255,255,.08);
+    padding:10px;
+    border-radius:12px;
+}
+
+section[data-testid="stSidebar"] hr{
+    border-color:rgba(255,255,255,.15);
+}
+
+.hero{
+    background:white;
+    border-radius:20px;
+    padding:30px;
+    margin-bottom:25px;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.05);
+}
+
+.hero h1{
+    color:#6D4C41;
+    margin-bottom:10px;
+    font-size:38px;
+}
+
+.hero p{
+    color:#777;
+    font-size:17px;
+}
+
+
+/* UPLOAD */
+
+[data-testid="stFileUploader"]{
+    border:2px dashed #BCAAA4;
+    border-radius:16px;
+    background:white;
+    padding:18px;
+}
+
+
+/* BUTTON */
+
+.stButton>button{
+    width:100%;
+    border:none;
+    border-radius:12px;
+    background:linear-gradient(
+        90deg,
+        #6D4C41,
+        #8D6E63
+    );
+
+    color:white;
+    font-weight:600;
+    padding:12px;
+    transition:.3s;
+}
+
+.stButton>button:hover{
+    transform:translateY(-2px);
+    box-shadow:0 10px 20px rgba(0,0,0,.12);
+}
+
+
+/* METRIKS */
+
+[data-testid="stMetric"]{
+    background:white;
+    border-radius:18px;
+    padding:18px;
+    border:1px solid var(--border);
+    box-shadow:0 8px 18px rgba(0,0,0,.05);
+}
+
+[data-testid="stMetricLabel"]{
+    font-weight:600;
+}
+
+[data-testid="stMetricValue"]{
+    color:#6D4C41;
+    font-size:32px;
+    font-weight:700;
+}
+
+img{
+    border-radius:18px;
+}
+
+.stProgress{
+    margin-top:10px;
+}
+
+.stProgress > div > div{
+    border-radius:20px;
+}
+
+
+/* DATAFRAME */
+
+[data-testid="stDataFrame"]{
+    background:white;
+    border-radius:18px;
+    overflow:hidden;
+    border:1px solid var(--border);
+}
+
+.js-plotly-plot{
+    background:white;
+    border-radius:20px;
+    padding:15px;
+    box-shadow:0 8px 18px rgba(0,0,0,.05);
+}
+
+.stAlert{
+    border-radius:15px;
+}
+
+.streamlit-expanderHeader{
+    font-weight:600;
+}
+
+
+div[role="radiogroup"]{
+    gap:10px;
+}
+
+
+/* SCROLLBAR */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-thumb{
+    background:#A1887F;
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:#6D4C41;
+}
+
+
+/* FOOTER */
+
+.footer{
+    text-align:center;
+    color:#888;
+    margin-top:30px;
+    font-size:14px;
+}
+
+/* ANIMASI */
+
+.hero,
+[data-testid="stMetric"],
+[data-testid="stDataFrame"],
+.js-plotly-plot,
+[data-testid="stFileUploader"]{
+
+    animation:fadeUp .4s ease;
+
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(10px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
